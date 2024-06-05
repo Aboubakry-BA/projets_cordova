@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'age</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculateur d'age</h1>
+        <form id="ageForm">
+            <label for="birthYear">Année de naissance</label>
+            <input type="number" id="birthYear" min="1900" max="2024">
+            <button type="button" id="calculateButton">Calculer</button>
+        </form>
+        <div id="resultContainer" class="hidden">
+            <h2 id="ageResult"></h2>
+        </div>
+    </div>
+</body>
+
+</html>

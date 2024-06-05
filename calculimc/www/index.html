@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'IMC</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculateur d'IMC</h1>
+        <form id="imcForm">
+            <fieldset>
+                <legend>Indice de Masse Corporelle</legend>
+                <label for="weight">Poids (kg)</label>
+                <input type="number" id="weight" min="1" step="0.1">
+                <label for="height">Taille (m)</label>
+                <input type="number" id="height" min="0.5" step="0.01">
+                <button type="button" id="calculateButton">Calculer</button>
+            </fieldset>
+            <fieldset id="resultContainer" class="hidden">
+                <legend>Interprétation</legend>
+                <label id="interpretation"></label>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="cordova.js"></script>
+    <title>Contact'Tel</title>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>Contact'Tel</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <a href="#ajout" data-role="button" data-icon="arrow-r" data-iconpos="right">Ajouter</a>
+            <ul id="contactList" data-role="listview" data-inset="true" data-filter="true"
+                data-filter-placeholder="Rechercher un contact..."></ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>DIC3 ESP 2023/2024</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="ajout">
+        <div data-role="header">
+            <h1>Ajouter un Contact</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form id="addContactForm">
+                <label for="contactName">Nom:</label>
+                <input type="text" name="contactName" id="contactName" required>
+                <label for="contactPhone">Téléphone:</label>
+                <input type="tel" name="contactPhone" id="contactPhone" required>
+                <button type="submit" data-role="button">Ajouter</button>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <a href="#home" data-role="button" data-icon="arrow-l" data-iconpos="left">Retour</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="details">
+        <div data-role="header">
+            <h1>Détails du Contact</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <img id="contactAvatar" src="img/avatar.jpg" alt="photo de profil du contact"
+                style="width:100px;height:100px;margin:auto;display:block;">
+            <h1 id="contactNameDetail" style="text-align:center;"></h1>
+            <p id="contactPhoneDetail" style="text-align:center;"></p>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <a href="#home" data-role="button" data-icon="arrow-l" data-iconpos="left">Retour</a>
+        </div>
+    </div>
+</body>
+
+</html>
